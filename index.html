@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar App</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
+        </div>
+      </div>
+
+      <div id="calendarToolbar">
+        <div id="createButtons" role="group" aria-label="Create calendar item">
+          <button type="button" id="createEventButton">Add Event</button>
+          <button type="button" id="createTaskButton">Add Task</button>
+        </div>
+
+      <div id="viewToggle" role="group" aria-label="Calendar view">
+        <button type="button" class="view-option" data-calendar-view="web" aria-pressed="false">Web view</button>
+        <button type="button" class="view-option" data-calendar-view="mobile" aria-pressed="false">Mobile view</button>
+      </div>
+      </div>
+
+      <div id="calendarScroll">
+        <div id="calendarSurface">
+          <div id="weekdays">
+            <div><span class="weekday-full">Sunday</span><span class="weekday-short">Sun</span></div>
+            <div><span class="weekday-full">Monday</span><span class="weekday-short">Mon</span></div>
+            <div><span class="weekday-full">Tuesday</span><span class="weekday-short">Tue</span></div>
+            <div><span class="weekday-full">Wednesday</span><span class="weekday-short">Wed</span></div>
+            <div><span class="weekday-full">Thursday</span><span class="weekday-short">Thu</span></div>
+            <div><span class="weekday-full">Friday</span><span class="weekday-short">Fri</span></div>
+            <div><span class="weekday-full">Saturday</span><span class="weekday-short">Sat</span></div>
+          </div>
+
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </div>
+
+      <div id="dayActionModal">
+        <h2>Add to this day</h2>
+        <button id="addEventButton">Add Event</button>
+        <button id="addTaskButton">Add Task</button>
+        <button id="cancelActionButton">Cancel</button>
+      </div>
+
+    <div id="newEventModal">
+      <h2 id="eventModalTitle">New Event</h2>
+
+      <input id="eventTitleInput" placeholder="Event Title" />
+      <label for="eventDateInput">Date</label>
+      <input id="eventDateInput" type="date" />
+      <label for="eventTimeInput">Time</label>
+      <input id="eventTimeInput" type="time" />
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal">
+  <h2>Event</h2>
+  <p id="eventText"></p>
+  <button id="editEventButton">Edit</button>
+  <button id="deleteButton">Delete</button>
+  <button id="closeButton">Close</button>
+</div>
+
+    <div id="taskModal">
+      <h2 id="taskModalTitle">New Task</h2>
+
+        <input id="taskInput" placeholder="New Task" />
+      <label for="taskDateInput">Date</label>
+      <input id="taskDateInput" type="date" />
+      <label for="taskTimeInput">Time</label>
+      <input id="taskTimeInput" type="time" />
+
+      <button id="saveButtonTwo">Save</button>
+        <button id="cancelButtonTwo">Cancel</button>
+    </div>
+
+     <div id="deleteTaskModal">
+      <h2>Task</h2>
+
+      <p id="taskText"></p>
+
+      <button id="editTaskButton">Edit</button>
+      <button id="deleteButtonTwo">Delete</button>
+      <button id="closeButtonTwo">Close</button>
+    </div>
+    
+    <div id="modalBackDrop"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+

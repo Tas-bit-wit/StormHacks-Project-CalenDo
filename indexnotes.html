@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Sidebar Notepad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- The Slide-Out Widget Container -->
+    <div id="sidebar-widget" class="sidebar-widget">
+        
+        <!-- The handle sticking out on the side of the screen -->
+        <button id="toggle-tab" class="toggle-tab" onclick="document.getElementById('sidebar-wideget').classList.toggle('open')">🌸<br>N<br>O<br>T<br>E<br>S</button>
+        
+        <div class="widget-content">
+            <div class="widget-header">
+                <span>✨ My Desk Buddy ✨</span>
+                
+                <!-- Color Theme Customizer -->
+                <div class="color-palette">
+                    <span class="color-dot pink active" data-color="#ffccd5" data-dark="#ff758f"></span>
+                    <span class="color-dot purple" data-color="#e8dbfc" data-dark="#b392ac"></span>
+                    <span class="color-dot blue" data-color="#d8f3dc" data-dark="#52b788"></span>
+                    <span class="color-dot yellow" data-color="#fefae0" data-dark="#dda15e"></span>
+                </div>
+            </div>
+
+            <!-- Mode Tabs (Jot Notes vs Checklist) -->
+            <div class="tab-selectors">
+                <button id="tab-jot" class="mode-tab active">🗒️ Jot Notes</button>
+                <button id="tab-check" class="mode-tab">✅ Checklist</button>
+            </div>
+
+            <div class="widget-body">
+                <!-- Input Section -->
+                <div class="input-area">
+                    <textarea id="widget-input" placeholder="Type something sweet... 📝"></textarea>
+                    <button id="add-btn">Add Item 💕</button>
+                </div>
+
+                <!-- Display Lists -->
+                <div id="jot-container" class="items-list"></div>
+                <div id="check-container" class="items-list hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
